@@ -1,10 +1,8 @@
-package com.honeywell.fireiot.redis;
+package com.init.redis;
 
 /**
  * RedisMap操作接口
  *
- * @Author: zhenzhong.wang
- * @Date: 9/10/2018 3:45 PM
  */
 public interface RedisMap {
     /**

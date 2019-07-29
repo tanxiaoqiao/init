@@ -1,4 +1,4 @@
-package com.honeywell.fireiot.redis;
+package com.init.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,14 +8,11 @@ import org.springframework.stereotype.Component;
 /**
  * RedisMap工厂
  *
- * @Author: zhenzhong.wang
- * @Time: 2018/9/10 16:07
  */
 @Component
 public class RedisMapFactory {
 
     // 激活的profile
-//    private static String profile;
     private static String defaultPrefix;
 
     private static RedisTemplate redisTemplate;

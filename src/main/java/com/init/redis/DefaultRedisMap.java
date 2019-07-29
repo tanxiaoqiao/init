@@ -1,4 +1,4 @@
-package com.honeywell.fireiot.redis;
+package com.init.redis;
 
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
