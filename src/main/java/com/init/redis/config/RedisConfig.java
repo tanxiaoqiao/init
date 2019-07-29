@@ -11,8 +11,6 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 /**
  * Redis通用配置
  *
- * @Author: zhenzhong.wang
- * @Date: 9/10/2018 4:02 PM
  */
 @Configuration
 @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 7200) //session过期时间，否则默认为1800s

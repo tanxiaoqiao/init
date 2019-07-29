@@ -1,6 +1,7 @@
 package com.init.utils;
 
 
+import com.init.constant.ErrorEnum;
 
 public class ResponseObject<T> {
     private int code;

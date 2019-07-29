@@ -6,8 +6,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 /**
  * Redis-HashMap操作类
  *
- * @Author: zhenzhong.wang
- * @Time: 2018/9/10 12:58
  */
 public class DefaultRedisMap implements RedisMap {
 
