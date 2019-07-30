@@ -24,9 +24,9 @@ public class CodeGenerat {
 
     @Test
     public void contextLoads() throws ClassNotFoundException, IOException, TemplateException {
-        String entityName = "User";
+        String entityName = "Resource";
         String serviceName = "init";
-        String projectPath = "/Users/xiaoqiao/workspace/security";
+        String projectPath = "/Users/xiaoqiao/IdeaProjects/init";
 
         String servicePath=projectPath; //projectPath + "/fire-" + serviceName +"-service";
         String modelPath= projectPath; //+ "/fire-" + serviceName +"-model";

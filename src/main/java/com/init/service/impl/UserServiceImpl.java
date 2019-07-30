@@ -3,7 +3,7 @@ package com.init.service.impl;
 import com.init.entity.User;
 import com.init.repository.UserRepository;
 import com.init.service.UserService;
-import com.init.utils.JpaUtils;
+import com.init.util.JpaUtils;
 import com.init.model.UserDto;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

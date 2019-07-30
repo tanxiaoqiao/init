@@ -1,4 +1,4 @@
-package com.init.utils;
+package com.init.util;
 
 public class RedisConstant {
     public static final String HASH_KEY_SECURITY = "init";

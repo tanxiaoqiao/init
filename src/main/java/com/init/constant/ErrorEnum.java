@@ -12,7 +12,7 @@ public enum ErrorEnum {
     ACCOUNT_EXIST(40002, "账户已存在"),
     PARAMS_ERROR(40003, "参数错误"),
     PASSWORD_ERROR(40004, "用户名或密码错误"),
-    USER_LOCKED(40005, "用户被禁用"),
+    NOT_FOUND(40005, "没有该记录"),
     NO_PERMISSION(40006,"无权限"),
 ;
 

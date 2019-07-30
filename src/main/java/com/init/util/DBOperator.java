@@ -1,4 +1,4 @@
-package com.init.utils;
+package com.init.util;
 
 
 public enum DBOperator {
