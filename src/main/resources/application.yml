@@ -1,17 +1,32 @@
 server:
-  port: 8011
+  port: 8081
 spring:
   datasource:
-    name: init
-    url: jdbc:postgresql://127.0.0.1:5432/test
-    username: postgres
-    password: 123456
-    driver-class-name: org.postgresql.Driver
-    dbcp2:
-      initial-size: 10
-      max-idle: 15
-      min-idle: 5
-      max-wait-millis: 10000
+    druid:
+      name: init
+      url: jdbc:postgresql://127.0.0.1:5432/test
+      username: postgres
+      password: 123456
+      driver-class-name: org.postgresql.Driver
+      filters: stat
+      # 初始连接
+      initialSize: 1
+      # 最大连接数
+      maxActive: 20
+      # 获取的最长等待时
+      maxWait: 60000
+      # 最小空闲连接数
+      minIdle: 1
+      # 每一分钟执行空闲连接回收
+      timeBetweenEvictionRunsMillis: 60000
+      # 每十分钟回收空闲连接
+      minEvictableIdleTimeMillis: 600000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
   jpa:
     generate-ddl: true
     hibernate.ddl-auto: update
@@ -34,13 +49,36 @@ spring:
         max-idle: 10
         max-wait: 20s
         min-idle: 5
-        shutdown-timeout: 5000ms
 
+
+mqtt:
+  username: face
+  password: face
+  url: tcp://localhost:1883
+  cleanSession: true
+  connectionTimeout: 30
+  keepAliveInterval: 60
+  subscribe:
+    clientId: finger-${random.uuid}
+    topics: face/HSAC-RDFR3000-MC/+/rx
+    qos: 0
+    binary: true
+    charset: UTF-8
+  publish:
+    clientId: finger-${random.uuid}
+    topicPrefix:
+    topic: face/HSAC-RDFR3000-MC/+/tx
+    qos: 0
+    retained: false
+    charset: UTF-8
+    async: false
+    completionTimeout: 3000
 
 logging.config:
-classpath: log4j2.properties
+        classpath: log4j2.properties
 
 redis:
   key:
     defaultPrefix: init
+
 
